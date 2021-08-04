@@ -1,0 +1,10 @@
+Komponen yang dibutuhkan
+
+:Home
+:Navbar
+:Artworks
+:Archived Design
+:Design
+:About Me
+
+
