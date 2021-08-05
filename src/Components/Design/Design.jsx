@@ -1,6 +1,12 @@
+import styled from 'styled-components';
+
+const DesignTitle = styled.h1`
+    color: white;
+`;
+
 function Design(props){
     return (
-        <h1>Design Page</h1>
+        <DesignTitle>Design Page</DesignTitle>
     )
 }
 
