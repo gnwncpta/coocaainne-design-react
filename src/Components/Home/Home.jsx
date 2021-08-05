@@ -11,7 +11,7 @@ const HomeContainer = styled.section`
     justify-content: space-between;
 
     // border: 1px solid pink;
-`
+`;
 
 const WelcomeSection = styled.div`
     text-align: left;
@@ -22,15 +22,15 @@ const WelcomeSection = styled.div`
 const BigTitle = styled.h1`
     font-weight: 400;
     font-size: 55px;
-`
+`;
 
 const Terminal = styled.span`
     font-family: 'Terminal Grotesque', monospace;
-`
+`;
 
 const WelcomeSlogans = styled.p`
     font-size: 14px;
-`
+`;
 
 const Buttons = styled.div`
     display: flex;
