@@ -4,8 +4,8 @@
 
 .App {
   text-align: center;
-  height: 100vh;
   background-color: #010101;
+  /* height: 100vh; */
   /* border: 1px solid red; */
 }
 

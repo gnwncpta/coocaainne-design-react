@@ -1,0 +1,57 @@
+div.mostLikedContainer {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgb(41, 41, 41);
+}
+
+div.mostLikedContainer p {
+    color: white;
+    font-weight: 400;
+}
+
+div.arrowContainer {
+    cursor: pointer;
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    /* background-color: rgb(65, 65, 65); */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.arrowContainer:active {
+    background-color: rgb(55, 55, 55);
+}
+
+div.mostLikedContainer .arrowContainer .arrow {
+    width: 10px;
+    height: 10px;
+
+    border-color: white;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+
+    transform: rotate(-45deg);
+}
+
+.mostLiked {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgb(0, 72, 255);
+
+    overflow: hidden;
+
+    animation: animateDown 1s ease-in-out;
+}

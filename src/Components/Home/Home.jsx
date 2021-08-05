@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-
-const Title = styled.h1`
-    color: white;
-`
+import koken from '../../assets/me-first.png';
 
 const HomeContainer = styled.section`
     width: 80%;
-    height: 80vh;
-    margin: auto;
+    margin: 50px auto;
     color: white;
 
     display: flex;
@@ -21,13 +17,6 @@ const WelcomeSection = styled.div`
     text-align: left;
     width: fit-content;
     // border: 1px solid pink;
-`;
-
-const ImageSection = styled.div`
-    width: 300px;
-    height: 300px;
-    margin-right: 100px;
-    border: 1px solid pink;
 `;
 
 const BigTitle = styled.h1`
@@ -60,8 +49,8 @@ const Button = styled.button`
     padding: 8px 20px;
     box-sizing: border-box;
     border-radius: 50px;
-    color: ${props => props.explore ? "#111" : "white"};
-    background-color: ${props => props.explore ? "white" : "transparent"};
+    color: ${props => props.active ? "#111" : "white"};
+    background-color: ${props => props.active ? "white" : "transparent"};
     margin-right: 30px;
     transition: .2s ease-in-out;
 
@@ -72,6 +61,19 @@ const Button = styled.button`
     &:last-child {
         font-weight: 400;
     }
+
+    &:last-child:hover {
+        font-style: italic;
+    }
+`;
+
+const ImageSection = styled.div`
+    margin-right: 100px;
+    // border: 1px solid pink;
+`;
+
+const Koken = styled.img`
+    width: 440px;
 `;
 
 function Home(props){
@@ -85,13 +87,13 @@ function Home(props){
                 <WelcomeSlogans>What's good man ? Take a time<br></br>to explore my crib</WelcomeSlogans>
 
                 <Buttons>
-                    <Button explore className="explore">Explore</Button>
+                    <Button active className="explore">Explore</Button>
                     <Button>Download My CV</Button>
                 </Buttons>
             </WelcomeSection>
 
             <ImageSection>
-
+                <Koken src={koken} alt="Image of coocaainne it self" />
             </ImageSection>
         </HomeContainer>
     )

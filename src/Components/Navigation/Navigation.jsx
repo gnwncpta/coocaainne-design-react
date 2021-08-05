@@ -1,4 +1,4 @@
-import Logo from '../../assets/cco-logo-big.png';
+import Logo from '../../assets/cco-logo-small.png';
 import './Navigation.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import Home from '../Home/Home';
 import Artworks from '../Artworks/Artworks';
 import ArchivedDesign from '../ArchivedDesign/ArchivedDesign';
+import Design from '../Design/Design';
+import AboutMe from '../AboutMe/AboutMe';
 
 const NavigationContainer = styled.header`
     width: 80%;
@@ -24,8 +26,9 @@ const CenterNavigation = styled.nav`
 `;
 
 const ImageLogo = styled.img`
-    width: 41.3px;
-    height: 30.24px;
+    width: 32px;
+    height: 32px;
+    // border: 1px solid red;
 `
 
 function Navigation(props){
@@ -38,9 +41,9 @@ function Navigation(props){
                 </Link>
 
                 <CenterNavigation className="center-nav">
-                    <Link to="/artworks">Artworks</Link>
-                    <Link to="/archived-design">Archived Design</Link>
-                    <Link to="/design">Design</Link>
+                    <Link to="/artworks" className={props.active}>Artworks</Link>
+                    <Link to="/archived-design" className={props.active}>Archived Design</Link>
+                    <Link to="/design" className={props.active}>Design</Link>
                 </CenterNavigation>
 
                 <Link to="/about-me" className="about-me">About Me</Link>
@@ -55,8 +58,16 @@ function Navigation(props){
                     <Artworks />
                 </Route>
 
-                <Route path="/artworks">
+                <Route path="/archived-design">
                     <ArchivedDesign />
+                </Route>
+
+                <Route path="/design">
+                    <Design />
+                </Route>
+
+                <Route path="/about-me">
+                    <AboutMe />
                 </Route>
             </Switch>
 
