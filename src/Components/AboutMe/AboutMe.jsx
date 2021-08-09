@@ -1,6 +1,12 @@
+import styled from 'styled-components';
+
+const AboutMeTitle = styled.h1`
+    color: white;
+`;
+
 function AboutMe(props){
     return (
-        <h1>About Me Page</h1>
+        <AboutMeTitle>About Me Page</AboutMeTitle>
     )
 }
 

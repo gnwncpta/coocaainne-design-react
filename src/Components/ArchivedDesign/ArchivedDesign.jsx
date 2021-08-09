@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Section from './Section';
+import Test from './Test';
 
 import artwork1 from '../../assets/artworks/1.svg';
 import artwork2 from '../../assets/artworks/2.svg';
@@ -38,6 +39,10 @@ function ArchivedDesign(props){
     const [ showItem, setShowItem ] = useState(false);
     const [ arrowDown, setArrow ] = useState(false);
 
+    useEffect(() => {
+        console.log('useEffect is working!');
+    }, []);
+
     function dropdownHandler(){
         setShowItem(showItem ? false : true);
     }
@@ -58,6 +63,7 @@ function ArchivedDesign(props){
 
             <Section title="Archived Season 2" />
             <Section title="Archived Season 3" />
+            <Test />
 
         </Container>
     );

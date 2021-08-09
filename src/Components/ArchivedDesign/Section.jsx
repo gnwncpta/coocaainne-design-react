@@ -48,11 +48,13 @@ const Arrow = styled.div`
 function Section(props){
     const { title, onClick, onArrow, arrow } = props;
 
+    function sectionHandler(){
+        onClick();
+        onArrow();
+    }
+
     return (
-        <MostLikedContainer onClick={() => {
-            onClick();
-            onArrow();
-        }}>
+        <MostLikedContainer onClick={sectionHandler}>
             <MostLikedTitle>{title}</MostLikedTitle>
             <ArrowContainer>
                 <Arrow direction={arrow}></Arrow>
