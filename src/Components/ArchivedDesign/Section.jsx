@@ -42,7 +42,7 @@ const Arrow = styled.div`
     border-style: solid;
     border-width: 1px 1px 0 0;
 
-    transform: ${props => props.direction ? "rotate(135deg)" : "rotate(-45deg)"};
+    transform: ${props => props.direction ? "rotate(-45deg)" : "rotate(135deg)"};
 `;
 
 function Section(props){

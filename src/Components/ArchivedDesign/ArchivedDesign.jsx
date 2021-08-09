@@ -21,7 +21,7 @@ const Container = styled.section`
     // justify-content: center;
 `;
 
-const MostLiked = styled.div`
+const MostLikedContainer = styled.div`
     width: 100%;
     height: ${props => props.larger ? "fit-content" : "0px"};
     display: flex;
@@ -32,6 +32,20 @@ const MostLiked = styled.div`
     // border: 1px solid rgb(0, 72, 255);
     overflow: hidden;
 `;
+
+function MostLiked(props) {
+    if(!props.showItem){
+        return null;
+    }
+
+    return (
+        <MostLikedContainer larger={props.showItem}>
+            <Item artworks={artwork1} title="SEX from Doujin" date="May 9, 2021"/>
+            <Item artworks={artwork2} title="Seal Her" date="Apr 17, 2021" />
+            <Item artworks={artwork3} title="Retro Car Wave" date="Jun 20, 2021" />
+        </MostLikedContainer>
+    )
+}
 
 
 function ArchivedDesign(props){
@@ -55,6 +69,7 @@ function ArchivedDesign(props){
         <Container className="ArchivedDesignContainer">
 
             <Section title="Archived Season 1" onClick={dropdownHandler} arrow={arrowDown} onArrow={arrowHandler} />
+<<<<<<< HEAD
             <MostLiked larger={showItem}>
                 <Item artworks={artwork1} title="SEX from Doujin" date="May 9, 2021"/>
                 <Item artworks={artwork2} title="Seal Her" date="Apr 17, 2021" />
@@ -64,6 +79,10 @@ function ArchivedDesign(props){
             <Section title="Archived Season 2" />
             <Section title="Archived Season 3" />
             <Test />
+=======
+            <MostLiked showItem={showItem}/>
+        
+>>>>>>> 491028792f172bdbe023f266435c41e2b9ac1bae
 
         </Container>
     );

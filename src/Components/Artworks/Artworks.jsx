@@ -37,7 +37,7 @@ function Artworks(props){
             <Item artworks={artwork1} title="SEX" date="May 9, 2021" />
             <Item artworks={artwork2} title="Seal" date="Dec 25, 2020" />
             <Item artworks={artwork3} title="Retro" date="Feb 23, 2021" />
-            <Item artworks={artwork4} title="Retro" date="Apr 3, 2021" />
+            <Item artworks={artwork4} title="Humble" date="Apr 3, 2021" />
             <Item artworks={artwork5} title="JAPAN" date="Sep 18, 2020" />
             <Item artworks={artwork6} title="Conspirare" date="Jul 5, 2020" />
             <Item artworks={artwork7} title="HENTAI" date="Jun 28, 2020" />
