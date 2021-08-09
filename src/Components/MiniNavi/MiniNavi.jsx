@@ -1,8 +1,9 @@
+import './MiniNavi.css';
 import { useState } from 'react';
 import styled from 'styled-components';
-import GraphicDesign from './GraphicDesign';
-import UIUX from './UIUX';
-import FrontEnd from './FrontEnd';
+import GraphicDesign from '../GraphicDesign/GraphicDesign';
+import UIUX from '../UIUX/UIUX';
+import FrontEnd from '../FrontEnd/FrontEnd';
 
 const Container = styled.section`
     width: 800px;
@@ -68,19 +69,19 @@ function MiniNavi(props){
     }
 
     return (
-        <Container>
-            <Sections>
+        <Container id="MiniNaviContainer">
+            <Sections id="SectionsContainer">
                 
-                <ProfessionContainer active={graphicDesign} onClick={graphicDesignHandler}>
-                    <Profession>Graphic Design</Profession>
+                <ProfessionContainer className="ProfessionContainer" active={graphicDesign} onClick={graphicDesignHandler}>
+                    <Profession className="profession">Graphic Design</Profession>
                 </ProfessionContainer>
 
-                <ProfessionContainer active={uiux} onClick={UIUXHandler}>
-                    <Profession>UI/UX Design</Profession>
+                <ProfessionContainer className="ProfessionContainer" active={uiux} onClick={UIUXHandler}>
+                    <Profession className="profession">UI/UX Design</Profession>
                 </ProfessionContainer>
 
-                <ProfessionContainer active={frontEnd} onClick={FrontEndHandler}>
-                    <Profession>Front End</Profession>
+                <ProfessionContainer className="ProfessionContainer" active={frontEnd} onClick={FrontEndHandler}>
+                    <Profession className="profession">Front End</Profession>
                 </ProfessionContainer>
 
             </Sections>

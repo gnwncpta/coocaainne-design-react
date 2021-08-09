@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Section from './Section';
+import Item from '../Item/Item';
 import Test from './Test';
 
+// Import Static Assets
 import artwork1 from '../../assets/artworks/1.svg';
 import artwork2 from '../../assets/artworks/2.svg';
 import artwork3 from '../../assets/artworks/3.svg';
-import Item from '../Item/Item';
 
 const Container = styled.section`
     width: 80%;
@@ -34,13 +35,13 @@ const MostLikedContainer = styled.div`
 `;
 
 function MostLiked(props) {
-    if(!props.showItem){
+    if(!props.show){
         return null;
     }
 
     return (
-        <MostLikedContainer larger={props.showItem}>
-            <Item artworks={artwork1} title="SEX from Doujin" date="May 9, 2021"/>
+        <MostLikedContainer larger={props.show}>
+            <Item artworks={artwork1} title="XES from Doujin" date="May 9, 2021"/>
             <Item artworks={artwork2} title="Seal Her" date="Apr 17, 2021" />
             <Item artworks={artwork3} title="Retro Car Wave" date="Jun 20, 2021" />
         </MostLikedContainer>
@@ -48,14 +49,10 @@ function MostLiked(props) {
 }
 
 
-function ArchivedDesign(props){
+export default function ArchivedDesign(props){
 
     const [ showItem, setShowItem ] = useState(false);
     const [ arrowDown, setArrow ] = useState(false);
-
-    useEffect(() => {
-        console.log('useEffect is working!');
-    }, []);
 
     function dropdownHandler(){
         setShowItem(showItem ? false : true);
@@ -69,23 +66,13 @@ function ArchivedDesign(props){
         <Container className="ArchivedDesignContainer">
 
             <Section title="Archived Season 1" onClick={dropdownHandler} arrow={arrowDown} onArrow={arrowHandler} />
-<<<<<<< HEAD
-            <MostLiked larger={showItem}>
+
+            <MostLiked show={showItem}>
                 <Item artworks={artwork1} title="SEX from Doujin" date="May 9, 2021"/>
                 <Item artworks={artwork2} title="Seal Her" date="Apr 17, 2021" />
                 <Item artworks={artwork3} title="Retro Car Wave" date="Jun 20, 2021" />
             </MostLiked>
-
-            <Section title="Archived Season 2" />
-            <Section title="Archived Season 3" />
-            <Test />
-=======
-            <MostLiked showItem={showItem}/>
         
->>>>>>> 491028792f172bdbe023f266435c41e2b9ac1bae
-
         </Container>
     );
 }
-
-export default ArchivedDesign;

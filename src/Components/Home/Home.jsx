@@ -54,8 +54,8 @@ const Button = styled.button`
     margin-right: 30px;
     transition: .2s ease-in-out;
 
-    &.explore:hover {
-        background-color: #BAFF00;
+    &:hover {
+        background-color: ${props => props.active ? "#BAFF00" : "transparent"};
     }
 
     &:last-child {
@@ -77,6 +77,11 @@ const Koken = styled.img`
 `;
 
 function Home(props){
+
+    const directedToArtworks = () => {
+        window.location.href = 'localhost:3000/artworks';
+    }
+
     return (
         <HomeContainer>
             <WelcomeSection>
@@ -87,7 +92,7 @@ function Home(props){
                 <WelcomeSlogans>What's good man ? Take a time<br></br>to explore my crib</WelcomeSlogans>
 
                 <Buttons>
-                    <Button active className="explore">Explore</Button>
+                    <Button active className="explore" onClick="directedToArtworks">Explore</Button>
                     <Button>Download My CV</Button>
                 </Buttons>
             </WelcomeSection>

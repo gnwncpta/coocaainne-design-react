@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import styled from 'styled-components';
-
-const AboutMeTitle = styled.h1`
-    color: white;
-`;
-
-function AboutMe(props){
-    return (
-        <AboutMeTitle>About Me Page</AboutMeTitle>
-=======
 import './AboutMe.css';
 import styled from 'styled-components';
 import meProfile from '../../assets/me-profile.png';
-import MiniNavi from './MiniNavi';
+import MiniNavi from '../MiniNavi/MiniNavi';
 
 const Container = styled.section`
     width: 80%;
@@ -31,10 +20,11 @@ const ProfileTop = styled.div`
     align-items: center;
 `;
 
-const ImageProfile = styled.img`
-    width: 253px;
-    height: 253px;
+const ImageProfile = styled.div`
+    width: 250px;
+    height: 250px;
     background: url('${meProfile}');
+    background-size: cover;
     border: 1px solid #111;
     border-radius: 100%;
     outline: none;
@@ -78,18 +68,16 @@ const Button = styled.button`
     margin-right: 25px;
 `;
 
-
-
 function AboutMe(props){
     return (
-        <Container>
-            <ProfileTop>
-                <ImageProfile />
+        <Container id="Container">
+            <ProfileTop id="profileTop">
+                <ImageProfile id="imageProfile"/>
 
-                <InfoProfile>
+                <InfoProfile id="infoProfile">
 
-                    <GreetingSmall>Hi, People know me as</GreetingSmall>
-                    <Username>@COOCAAINNE</Username>
+                    <GreetingSmall className="greeting">Hi, People know me as</GreetingSmall>
+                    <Username className="username">@COOCAAINNE</Username>
 
                     <Roles>
                         <Role>Graphic Designer</Role>
@@ -104,9 +92,8 @@ function AboutMe(props){
 
             </ProfileTop>
 
-            <MiniNavi />
+            <MiniNavi /> 
         </Container>
->>>>>>> 491028792f172bdbe023f266435c41e2b9ac1bae
     )
 }
 

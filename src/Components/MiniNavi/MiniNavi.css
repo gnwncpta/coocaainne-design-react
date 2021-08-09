@@ -1,0 +1,16 @@
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+    #MiniNaviContainer {
+        width: 600px;
+        /* border: 1px solid rgba(255, 192, 203, 0.579); */
+    }
+
+    #SectionsContainer .ProfessionContainer {
+        padding: 1px 5px;
+    }
+
+    #SectionsContainer .ProfessionContainer .profession {
+        font-size: 14px;
+    }
+
+}
